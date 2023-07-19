@@ -1,0 +1,13 @@
+@use 'src/assets/scss/vars'  as _vars;
+
+.title {
+  color: _vars.$primary;
+  text-align: center;
+}
+
+.icon {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
