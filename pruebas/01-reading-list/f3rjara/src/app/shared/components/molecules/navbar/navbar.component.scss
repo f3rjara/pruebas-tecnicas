@@ -4,21 +4,29 @@
 :host {
   .nav {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr;
+
     &__container {
       align-items: center;
       border-radius: 0.5em;
-      box-shadow: _vars.$shadow-ligth-1;
       display: flex;
+      justify-content: space-between;
+      min-height: 40px;
       overflow: hidden;
+      padding: 0 1em;
 
       @include _TS.themed() {
-        background: _TS.prop('hover');
+        background: _TS.prop('card-bg');
+        box-shadow: _TS.prop('shadow-1');
       }
+    }
 
-      &--rigth {
+    .navbar {
+      &__rigth {
+        display: flex;
+        flex-direction: row;
         justify-content: flex-end;
+        position: relative;
       }
     }
   }

@@ -4,11 +4,11 @@
 :host {
   align-items: center;
   display: flex;
-  height: 100%;
+
   .link {
     font-family: _vars.$font-heading;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.35em;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -16,10 +16,8 @@
     user-select: none;
 
     @include _TS.themed() {
-
       color: _TS.prop('text');
     }
-
 
     @media screen and (max-width: _vars.$desktop) {
       font-size: 0.9em;

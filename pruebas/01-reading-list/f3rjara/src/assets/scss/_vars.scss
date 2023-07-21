@@ -6,8 +6,8 @@
 $brand--primary--light: #b45139;
 $brand--primary--dark: lighten($brand--primary--light, 10%);
 
-$brand--secondary--light: $brand--primary--light;
-$brand--secondary--dark: $brand--primary--dark;
+$brand--secondary--light:#0589e0;
+$brand--secondary--dark: lighten($brand--secondary--light, 10%);
 
 $bg--red: lighten($brand--primary--light, 40%);
 $bg--blue: lighten($brand--secondary--light, 40%);
@@ -36,14 +36,14 @@ $text--3--dark: darken($text--dark, 20%);
 $border--light: darken($bg--card--light, 10%);
 $border--dark: lighten($bg--card--dark, 10%);
 
-$hover--light: transparentize($brand--secondary--light, .9);
+$hover--light: transparentize($bg--dark--top, .9);
 $hover--dark: transparentize(#fff, .9);
 
-$highlight-color: transparentize($brand--secondary--light, .1);
+$highlight-color: transparentize($bg--dark--top, .1);
 
 /* shadows */
-$shadow-ligth-1: 0 5px 10px rgba($bg--dark--top, 0.2);
-$shadow-dark-1: 0 5px 10px rgba($bg--dark--bottom, 0.2);
+$shadow-ligth-1: 0 5px 10px rgba($bg--dark--bottom, 0.2);
+$shadow-dark-1: 0 5px 10px rgba($bg--dark--bottom, 0.8);
 
 /* Typography */
 $font-body: 'Poppins', sans-serif;

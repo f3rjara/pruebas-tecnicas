@@ -1,0 +1,21 @@
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
+
+:host {
+  align-items: center;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  svg {
+    @include _TS.themed() {
+      stroke: _TS.prop('text-secondary');
+    }
+    &:hover {
+      @include _TS.themed() {
+        stroke: _TS.prop('brand-blue');
+      }
+    }
+  }
+}
