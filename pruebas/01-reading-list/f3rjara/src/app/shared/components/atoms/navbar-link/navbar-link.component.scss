@@ -1,0 +1,35 @@
+@use 'src/assets/scss/vars' as _vars;
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
+
+:host {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  .link {
+    font-family: _vars.$font-heading;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    user-select: none;
+
+    @include _TS.themed() {
+
+      color: _TS.prop('text');
+    }
+
+
+    @media screen and (max-width: _vars.$desktop) {
+      font-size: 0.9em;
+      padding: 5px 10px;
+    }
+
+    &:hover {
+      @include _TS.themed() {
+        background: _TS.prop('hover');
+      }
+    }
+  }
+}

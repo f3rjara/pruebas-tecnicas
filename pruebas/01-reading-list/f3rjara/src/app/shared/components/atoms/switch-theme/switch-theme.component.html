@@ -1,0 +1,14 @@
+<button
+  class="btn-switch"
+  (click)="changeSwitch()"
+  title="{{ !activateThemeDark ? 'Activar' : 'Desactivar' }} el modo oscuro">
+  <app-icon-switch-off
+    *ngIf="!activateThemeDark"
+    [width]="'45px'"
+    [height]="'35px'"></app-icon-switch-off>
+  <app-icon-switch-on
+    *ngIf="activateThemeDark"
+    [width]="'45px'"
+    [height]="'35px'"
+    [stroke]="'#b45139'"></app-icon-switch-on>
+</button>
