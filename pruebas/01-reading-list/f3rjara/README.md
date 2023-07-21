@@ -34,6 +34,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 |  Node         |  16.16    |
 |  Npm          |  8.11     |
 
+## About this App
+
+This application is intended for organizing and planning the user's reading booklist. You can add, delete, and view books on your reading list. There is a section for recommended books based on the categories of books added. Filter or search through available books according to your preferences and needs. The list synchronizes across different browser tabs, and data persists in the browser (localStorage). You can also make use of Dark Mode.
+
 
 ## Development server
 

@@ -3,6 +3,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@ions/*": ["src/app/shared/components/ions/*"],
+      "@atoms/*": ["src/app/shared/components/atoms/*"],
+      "@molecules/*": ["src/app/shared/components/molecules/*"],
+      "@organisms/*": ["src/app/shared/components/organisms/*"],
+      "@interfaces/*": ["src/app/shared/interfaces/*"]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
