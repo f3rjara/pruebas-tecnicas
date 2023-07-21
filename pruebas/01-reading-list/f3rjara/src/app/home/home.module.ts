@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomeRoutingModule } from './home-routing.module';
+/* pages */
 import { HomeComponent } from './pages/home/home.component';
-import { AloneButtonComponent } from '../shared/components/atoms/alone-button/alone-button.component';
-
+/* Standalone components */
+import { NavbarComponent } from '@molecules/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { AloneButtonComponent } from '../shared/components/atoms/alone-button/al
   imports: [
     CommonModule,
     HomeRoutingModule,
-    AloneButtonComponent
+    NavbarComponent
   ]
 })
 export class HomeModule { }

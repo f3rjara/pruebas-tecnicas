@@ -1,0 +1,37 @@
+<nav class="nav bg-light">
+  <section class="nav__container navbar">
+    <app-navbar-link [href]="'/'" [title]="'Lectuariando'" [external]="false">
+      Lectuariando
+    </app-navbar-link>
+  </section>
+  <section class="nav__container nav__container--rigth navbar">
+    <app-navbar-link
+      [href]="'https://github.com/f3rjara'"
+      [external]="true"
+      [target]="'_blank'"
+      [title]="'Visita mi Github! @f3rjara'">
+      <app-icon-github [width]="'28px'" [height]="'28px'" class="icon">
+      </app-icon-github>
+    </app-navbar-link>
+
+    <app-navbar-link
+      [href]="'https://www.linkedin.com/in/f3rjara/'"
+      [external]="true"
+      [target]="'_blank'"
+      [title]="'Visita mi linkedin! @f3rjara'">
+      <app-icon-linkedin [width]="'28px'" [height]="'28px'" class="icon">
+      </app-icon-linkedin>
+    </app-navbar-link>
+
+    <app-navbar-link
+      [href]="'https://fernando-jaramillo.com'"
+      [external]="true"
+      [target]="'_blank'"
+      [title]="'Visita mi web! fernando-jaramillo.com'">
+      <app-icon-web [width]="'28px'" [height]="'28px'" class="icon">
+      </app-icon-web>
+    </app-navbar-link>
+
+    <app-switch-theme></app-switch-theme>
+  </section>
+</nav>
