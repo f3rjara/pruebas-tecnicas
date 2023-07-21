@@ -1,0 +1,25 @@
+@use 'src/assets/scss/vars' as _vars;
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
+
+:host {
+  .nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    &__container {
+      align-items: center;
+      border-radius: 0.5em;
+      box-shadow: _vars.$shadow-ligth-1;
+      display: flex;
+      overflow: hidden;
+
+      @include _TS.themed() {
+        background: _TS.prop('hover');
+      }
+
+      &--rigth {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

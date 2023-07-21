@@ -1,18 +1,25 @@
-@use 'mixins/mix_button' as _mix_button;
+@use 'src/assets/scss/vars'  as _vars;
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
 
 html, body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-.btn {
-  &__text {
-    font-size: 1em;
+.main-wrapper {
+  padding: 1em 0;
+  min-height: 100vh;
+  transition: background 0.3s ease-in-out;
+  @include _TS.themed() {
+    background: _TS.prop('bg');
   }
+}
 
-  &__icon {
-    margin-right: 0.5em;
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  @media screen and (max-width: _vars.$desktop) {
+    max-width: 96%;
   }
-
-  @include _mix_button.button-states;
 }

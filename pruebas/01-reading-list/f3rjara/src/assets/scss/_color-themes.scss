@@ -1,0 +1,32 @@
+@use 'src/assets/scss/vars' as _vars;
+
+$themes: (
+  default: (
+    bg: _vars.$bg--light,
+    card-bg: _vars.$bg--card--light,
+    card-border: _vars.$card-border--light,
+    text: _vars.$text--light,
+    text-important: _vars.$text--imp--light,
+    text-secondary: _vars.$text--2--light,
+    text-badge: _vars.$text--light,
+    link: _vars.$brand--secondary--light,
+    hover: _vars.$hover--light,
+    brand-red: _vars.$brand--primary--light,
+    brand-blue: _vars.$brand--secondary--light,
+    border: _vars.$border--light,
+  ),
+  dark: (
+    bg: _vars.$bg--dark--top,
+    card-bg: _vars.$bg--card--dark,
+    card-border: _vars.$card-border--dark,
+    text: _vars.$text--dark,
+    text-important: _vars.$text--imp--dark,
+    text-secondary: _vars.$text--2--dark,
+    text-badge: _vars.$text--dark,
+    link: _vars.$brand--secondary--dark,
+    hover: _vars.$hover--dark,
+    brand-red: _vars.$brand--primary--dark,
+    brand-blue: _vars.$brand--secondary--dark,
+    border: _vars.$border--dark,
+  ),
+);

@@ -1,8 +1,11 @@
 @use 'src/assets/scss/vars'  as _vars;
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
 
 .title {
-  color: _vars.$primary;
   text-align: center;
+  @include _TS.themed() {
+    color: _TS.prop('text');
+  }
 }
 
 .icon {

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { SwitchThemeComponent } from './switch-theme.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('SwitchThemeComponent', () => {
+  let component: SwitchThemeComponent;
+  let fixture: ComponentFixture<SwitchThemeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
+      imports: [ SwitchThemeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(SwitchThemeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,19 @@
+@use 'src/assets/scss/vars' as _vars;
+@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
+
+:host {
+  display: flex;
+  height: 100%;
+  .btn-switch {
+    background: none;
+    border: none;
+    padding: 5px;
+    height: 100%;
+    margin: 0;
+    &:hover {
+      @include _TS.themed() {
+        background: _TS.prop('hover');
+      }
+    }
+  }
+}

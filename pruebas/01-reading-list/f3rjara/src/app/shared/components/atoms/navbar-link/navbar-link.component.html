@@ -1,0 +1,15 @@
+<ng-container *ngIf="external; else internalLink">
+  <a [href]="href" [target]="target" [title]="title" class="link" [attr.aria-label]="title">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </a>
+</ng-container>
+
+<ng-template #internalLink>
+  <a [routerLink]="[href]" [title]="title" class="link" [attr.aria-label]="title">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </a>
+</ng-template>
+
+<ng-template #contentTemplate>
+  <ng-content></ng-content>
+</ng-template>
