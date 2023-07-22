@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 /* Standalone Component Imports */
 import { IconForTypeComponent } from '../../ions/icon-for-type/icon-for-type.component';
+import { ThemeService } from '@core/services/theme.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-switch-theme',
@@ -10,22 +12,29 @@ import { IconForTypeComponent } from '../../ions/icon-for-type/icon-for-type.com
   templateUrl: './switch-theme.component.html',
   styleUrls: ['./switch-theme.component.scss']
 })
-export class SwitchThemeComponent {
-  activateThemeDark: boolean;
+export class SwitchThemeComponent implements OnDestroy {
+
+  activateThemeDarkSuscribe: Subscription;
+  activateThemeDark!: boolean;
+
+  private _themeService = inject(ThemeService);
 
   constructor() {
-    this.activateThemeDark = false;
+    this.activateThemeDarkSuscribe = this._themeService.getActivateThemeDark
+      .subscribe((status: boolean) => {
+        this.activateThemeDark = status;
+      });
+
+    this._themeService.updateTheme(this.activateThemeDark);
+  }
+
+  ngOnDestroy(): void {
+    this.activateThemeDarkSuscribe.unsubscribe();
   }
 
   changeSwitch() {
     this.activateThemeDark = !this.activateThemeDark;
-    // if activateThemeDark is true add class dark-theme to body
-    if (this.activateThemeDark) {
-      document.body.classList.add('theme--dark');
-    }
-    // if activateThemeDark is false remove class dark-theme to body
-    else {
-      document.body.classList.remove('theme--dark');
-    }
+    this._themeService.updateTheme(this.activateThemeDark);
   }
+
 }
