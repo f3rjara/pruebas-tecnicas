@@ -2,13 +2,21 @@
   class="btn-switch"
   (click)="changeSwitch()"
   title="{{ !activateThemeDark ? 'Activar' : 'Desactivar' }} el modo oscuro">
-  <app-icon-switch-off
+  <app-icon-for-type
     *ngIf="!activateThemeDark"
     [width]="'45px'"
-    [height]="'35px'"></app-icon-switch-off>
-  <app-icon-switch-on
+    [height]="'35px'"
+    [name]="'icon-switch-off'"
+    class="icon">
+  </app-icon-for-type>
+
+  <app-icon-for-type
     *ngIf="activateThemeDark"
     [width]="'45px'"
     [height]="'35px'"
-    [stroke]="'#b45139'"></app-icon-switch-on>
+    [name]="'icon-switch-on'"
+    [stroke]="'#b45139'"
+    class="icon">
+  </app-icon-for-type>
+
 </button>

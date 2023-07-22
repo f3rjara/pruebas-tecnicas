@@ -14,6 +14,7 @@ $themes: (
     brand-red: _vars.$brand--primary--light,
     brand-blue: _vars.$brand--secondary--light,
     border: _vars.$border--light,
+    shadow-1: _vars.$shadow-ligth-1,
   ),
   dark: (
     bg: _vars.$bg--dark--top,
@@ -28,5 +29,6 @@ $themes: (
     brand-red: _vars.$brand--primary--dark,
     brand-blue: _vars.$brand--secondary--dark,
     border: _vars.$border--dark,
+    shadow-1: _vars.$shadow-dark-1,
   ),
 );

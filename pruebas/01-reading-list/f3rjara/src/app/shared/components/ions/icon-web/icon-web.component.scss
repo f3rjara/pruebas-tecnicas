@@ -1,8 +1,0 @@
-:host {
-  align-items: center;
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  &:hover {
-    transform: translateY(-2px);
-  }
-}
