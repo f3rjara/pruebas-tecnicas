@@ -1,3 +1,38 @@
 <main>
   <app-navbar></app-navbar>
+
+  <section class="container">
+    <div class="container__card">
+      <h1>Organiza y planitifica tus lecturas</h1>
+
+      <div class="header__filter">
+        <div class="input__group">
+          <input type="text" name="name" id="name__book" #nameBook placeholder="Nombre del libro">
+          <button>Buscar</button>
+        </div>
+
+        <div class="input__group">
+          <label for="vol">Páginas (desde 0 and 1550):</label>
+          <input type="range" id="vol" name="vol" min="0" max="50">
+        </div>
+
+        <div class="input__group">
+          <select name="type__book" id="type__book">
+            <option value="all">Todos</option>
+            <option value="read">Leídos</option>
+            <option value="reading">Leyendo</option>
+            <option value="want">Quiero leer</option>
+          </select>
+        </div>
+      </div>
+
+      <section class="books_disponible">
+        <app-book-read-list></app-book-read-list>
+      </section>
+    </div>
+    <div class="container__card container__card--list ">
+      <h2>Libros agreados para leer</h2>
+      <app-book-read-list></app-book-read-list>
+    </div>
+  </section>
 </main>

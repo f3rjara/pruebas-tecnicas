@@ -1,16 +1,34 @@
 @use 'src/assets/scss/vars'  as _vars;
-@use 'src/assets/scss/mixins/mix_theme_selector'  as _TS;
 
-.title {
-  text-align: center;
-  @include _TS.themed() {
-    color: _TS.prop('text');
+.container {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  gap: 1em;
+  &__card {
+    border: 1px solid red;
+    &--list {
+      position: sticky;
+      top: 15px;
+      height: fit-content;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    &__card {
+      border: 1px solid blue;
+    }
   }
 }
 
-.icon {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
+
+.header__filter {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 1em;
+  border-radius: .5em;
+  margin-bottom: 2em;
 }

@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 /* Standalone components */
 import { NavbarComponent } from '@molecules/navbar/navbar.component';
+import { BookReadListComponent } from './../shared/components/organims/book-read-list/book-read-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NavbarComponent } from '@molecules/navbar/navbar.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    BookReadListComponent
   ]
 })
 export class HomeModule { }

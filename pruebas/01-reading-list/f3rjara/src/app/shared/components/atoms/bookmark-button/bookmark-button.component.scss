@@ -1,0 +1,15 @@
+
+.bookmark {
+  border: 1px solid white;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transition: transform .4s ease-in-out;
+  &:hover {
+    background: rgb(73, 12, 12);
+    color: #000;
+    border-color: #000;
+    transform: translateY(-2px);
+  }
+}

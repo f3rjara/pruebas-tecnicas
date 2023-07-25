@@ -12,3 +12,6 @@
 
 <!-- ICON SVG SWITCH ON , Selector: icon-switch-on  -->
 <svg *ngIf="name == 'icon-switch-on'" [attr.width]="width" [attr.height]="height" stroke-width="1.1" viewBox="0 0 24 24" [attr.fill]="fill" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M17 13a1 1 0 100-2 1 1 0 000 2z" fill="#000000" [attr.stroke]="stroke" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 17H7A5 5 0 017 7h10a5 5 0 010 10z" [attr.stroke]="stroke" stroke-width="1.1"></path></svg>
+
+<!-- ICON SVG BOOKMARK, Selector: icon-bookmark -->
+<svg *ngIf="name == 'icon-bookmark'" [attr.width]="width" [attr.height]="height" stroke-width="1.1" viewBox="0 0 24 24" [attr.fill]="fill" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16l-5.918-3.805a2 2 0 00-2.164 0L5 21z" [attr.stroke]="stroke" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
